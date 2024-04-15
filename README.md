@@ -59,7 +59,7 @@ CREATE TABLE Cartao (
 	estado VARCHAR(3)
 );
 
-CREATE TABLE SeguroApolice (
+CREATE TABLE Seguroapolice (
     numero_apolice SERIAL PRIMARY KEY,
 	tipo_apolice VARCHAR(15) NOT NULL,
 	valor_assegurado NUMERIC(15, 2),
