@@ -1,0 +1,284 @@
+{
+	"info": {
+		"_postman_id": "9f2800c1-b215-4b35-9a11-5a1e3dfdb3e3",
+		"name": "BlueBank - BancoDigital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34153969"
+	},
+	"item": [
+		{
+			"name": "Cadastrar Cliente",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"cpf\": \"896.855.566-44\",\r\n  \"nome\": \"Bruno Almeida dos Santos\",\r\n  \"dataNascimento\": \"20-05-2005\",\r\n  \"rua\": \"Rua abc\",\r\n  \"numero\": \"123\",\r\n  \"cep\": \"99999999\",\r\n  \"cidade\": \"São Paulo\",\r\n  \"estado\": \"SP\",\r\n  \"tipoCliente\": \"Comum\",\r\n  \"tipoConta\": \"Corrente\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cliente/v1/cadastrar-cliente",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"v1",
+						"cadastrar-cliente"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gerar Cartão",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"clienteCpf\": \"896.855.566-44\",\r\n    \"senha\": \"1234\",\r\n    \"tipoCartao\": \"credito\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cartao/v1/gerar-cartao",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cartao",
+						"v1",
+						"gerar-cartao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Saldo",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cliente/v1/ver-saldo/45",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"v1",
+						"ver-saldo",
+						"45"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Depositar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroConta\": 45,\r\n    \"valor\": 500.00\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cliente/v1/depositar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"v1",
+						"depositar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Sacar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroConta\": 40,\r\n    \"valor\": 500\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cliente/v1/sacar",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"v1",
+						"sacar"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Transferência Pix",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroContaOrigem\": 41,\r\n    \"numeroContaDestino\": 42,\r\n    \"valorPix\": 5.5\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cliente/v1/transferencia-pix",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cliente",
+						"v1",
+						"transferencia-pix"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Pagar Conta com Cartão",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroCartao\": 9941039226344340,\r\n    \"senhaCartao\": 1234,\r\n    \"valorConta\": 123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cartao/v1/pagar-conta-cartao",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cartao",
+						"v1",
+						"pagar-conta-cartao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Alterar Senha Cartao",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numeroCartao\": 9941039226344340,\r\n    \"senhaAntiga\": 1234,\r\n    \"senhaNova\": 123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/cartao/v1/alterar-senha-cartao",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cartao",
+						"v1",
+						"alterar-senha-cartao"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Ver Fatura",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/cartao/v1/ver-fatura/9941039226344340",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cartao",
+						"v1",
+						"ver-fatura",
+						"9941039226344340"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gerar Apólice",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"tipoApolice\": \"Fraude\",\r\n    \"senhaCartao\": 123,\r\n    \"idCartao\": 22\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/apolice/v1/gerar-apolice",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apolice",
+						"v1",
+						"gerar-apolice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
