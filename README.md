@@ -64,4 +64,4 @@ CREATE TABLE SeguroApolice (
 	valor_assegurado NUMERIC(15, 2),
 	data_emissao DATE,
 	id_cartao BigInt REFERENCES Cartao(id)
-);```
+);
