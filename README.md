@@ -31,7 +31,8 @@
 1. [POST] - /apolice/v1/gerar-apolice
 
 ## Tabelas SQL
-```CREATE TABLE Cliente (
+```
+CREATE TABLE Cliente (
 	id SERIAL PRIMARY KEY,
 	cpf VARCHAR(11) UNIQUE NOT NULL,
 	nome VARCHAR(100) NOT NULL,
