@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: Banco Digital CDB
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/BANCODIGITALCDB?ApplicationName=BancoDigitalCDB
+    username: postgres
+    password: 123
+    driver-class-name: org.postgresql.Driver
+
+  hikari:
+    maximum-pool-size: 3
+    minimum-idle: 2
+    idle-timeout: 20000
+    poolName: BancoDigitalCDB
