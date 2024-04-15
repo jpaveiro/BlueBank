@@ -1,5 +1,10 @@
 # BlueBank - Banco Digital CDB 🏦
 
+## Integrantes - Grupo 9
+- Thomas
+- João Pedro
+- Daniel
+
 ## Requisitos minimos
 - JDK >= 17.
 - Maven.
