@@ -1,4 +1,5 @@
 # BlueBank - Banco Digital CDB 🏦
+### Projeto de conclusão do Bootcamp CDB Java - Educ360º em parceria com a Foursys.
 
 ## Integrantes - Grupo 9
 - Thomas
